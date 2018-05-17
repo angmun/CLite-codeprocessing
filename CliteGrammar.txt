@@ -18,8 +18,9 @@
   RelOp           ==>  < | <= | > | >= 
   Addition        ==>  Term { AddOp Term }
   AddOp           ==>  + | -
-  Term            ==>  Factor { MulOp Factor }
+  Term            ==>  Exponent { MulOp Exponent }
   MulOp           ==>  * | / | %
+  Exponent        ==>  { Factor ** } Factor
   Factor          ==>  [ UnaryOp ] Primary
   UnaryOp         ==>  - | !
   Primary         ==>  Identifier | IntLit | FloatLit | ( Expression ) | true | false
