@@ -1,0 +1,25 @@
+  Program         ==>  int  main ( ) { Declarations Statements }
+  Declarations    ==>  { Declaration }
+  Declaration     ==>  Type  Identifier  ;
+  Type            ==>  int | bool | float
+  Statements      ==>  { Statement }
+  Statement       ==>  ; | Block | Assignment | IfStatement 
+                       | WhileStatement | PrintStatement
+  Block           ==>  { Statements }
+  Assignment      ==>  Identifier = Expression ;
+  IfStatement     ==>  if ( Expression ) Statement [ else Statement ]
+  WhileStatement  ==>  while ( Expression ) Statement 
+  PrintStatement  ==>  print( Expression ) ;  
+  Expression      ==>  Conjunction { || Conjunction }
+  Conjunction     ==>  Equality { && Equality }
+  Equality        ==>  Relation [ EquOp Relation ]
+  EquOp           ==>  == | != 
+  Relation        ==>  Addition [ RelOp Addition ]
+  RelOp           ==>  < | <= | > | >= 
+  Addition        ==>  Term { AddOp Term }
+  AddOp           ==>  + | -
+  Term            ==>  Factor { MulOp Factor }
+  MulOp           ==>  * | / | %
+  Factor          ==>  [ UnaryOp ] Primary
+  UnaryOp         ==>  - | !
+  Primary         ==>  Identifier | IntLit | FloatLit | ( Expression ) | true | false
