@@ -797,7 +797,8 @@ if __name__ == '__main__':
 
             # Run the CLite program and print its result.
             print("\n")
-            print("Result: " + asr.run())
+            print("Result:") 
+            asr.run()
 
         # A CLite syntax error was raised; print the error message from the caught exception.
         except CLiteSyntaxError as e:
